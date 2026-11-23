@@ -1,0 +1,6 @@
+scikit-learn
+mlflow
+pandas
+azure-ai-ml
+azure-identity
+azureml-mlflow

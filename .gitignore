@@ -1,0 +1,18 @@
+# Virtuelle Umgebung (zu groß für Git)
+venv/
+.venv/
+.env
+# Python-Bytecode & Caches (automatisch generierte temporäre Dateien)
+__pycache__/
+*.pyc[cod]
+
+# MLflow lokale Artefakte & Daten
+mlruns/
+.trash/
+
+# Betriebssystem-Spezifisches
+.DS_Store
+Thumbs.db
+
+downloaded_model/
+outputs/
