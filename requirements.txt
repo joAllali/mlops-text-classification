@@ -1,6 +1,9 @@
 scikit-learn
 mlflow
 pandas
+joblib
 azure-ai-ml
 azure-identity
 azureml-mlflow
+fastapi
+uvicorn

@@ -1,11 +1,9 @@
 name: MLOps Text Classification Pipeline
 
 on:
-  # Trigger pipeline automatically on every push to the main branch
   push:
     branches:
       - main
-  # Allow manual trigger directly from the GitHub Actions UI
   workflow_dispatch:
 
 jobs:
@@ -34,3 +32,15 @@ jobs:
           AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
         run: |
           python train.py
+
+  build-docker-image:
+    runs-on: ubuntu-latest
+    needs: train-and-register
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Build FastAPI Docker image
+        run: |
+          docker build -t text-classification-api:latest .

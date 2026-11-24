@@ -1,0 +1,13 @@
+# Ignore local virtual environments
+venv/
+.venv/
+
+# Ignore git and GitHub files
+.git/
+.github/
+
+# Ignore Python cache and local model artifacts
+__pycache__/
+*.py[cod]
+outputs/
+downloaded_model/
